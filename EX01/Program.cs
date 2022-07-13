@@ -4,6 +4,12 @@ int n = Input("Введите n: ");
 
 int[,] array = new int[m, n];
 
+int Input(string output)
+{
+    Console.Write(output);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
 void PourArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -25,12 +31,6 @@ void PrintArray(int[,] array)
         }
         Console.WriteLine();
     }
-}
-
-int Input(string output)
-{
-    Console.Write(output);
-    return Convert.ToInt32(Console.ReadLine());
 }
 
 PourArray(array);
